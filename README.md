@@ -92,8 +92,8 @@ chmod +x massns.sh
 
 # Output
 
-![domain's & ip's ](https://github.com/Abss0x7tbh/massNS/ss_1.png)
-![only ip's](https://github.com/Abss0x7tbh/massNS/ss_2.png)
+![domain's & ip's ](https://github.com/Abss0x7tbh/massNS/blob/master/ss_1.png)
+![only ip's](https://github.com/Abss0x7tbh/massNS/blob/master/ss_2.png)
 # Exceptions
 
 `awsdns` seems to not allow this. Other DNS providers that allow this are :
