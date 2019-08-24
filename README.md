@@ -100,6 +100,7 @@ chmod +x massns.sh
 
 - if the domain has a canonical name the tool would usually output just the canonical name.
 - `awsdns` seems to not allow this. 
+- Truly have no idea if the authoritative nameservers would ever complain?
 
 # Non-Exceptions
 Other DNS providers that allow this are :
