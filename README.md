@@ -111,7 +111,7 @@ and a lot more..
 
 # Test Case
 
-Against Paypal the tool could gather `698` authoritative nameservers turned resolvers.
+Against Paypal the tool could gather `698` authoritative nameservers turned resolvers, a combination of dns servers from both `dynect` & `ultradns`
 
 
 **P.S** : Please do share what you think of this approach. Thanks!
