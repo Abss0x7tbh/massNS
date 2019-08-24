@@ -93,14 +93,25 @@ chmod +x massns.sh
 # Output
 
 ![domain's & ip's ](https://github.com/Abss0x7tbh/massNS/blob/master/ss_1.png)
+
 ![only ip's](https://github.com/Abss0x7tbh/massNS/blob/master/ss_2.png)
+
 # Exceptions
 
-`awsdns` seems to not allow this. Other DNS providers that allow this are :
+- if the domain has a canonical name the tool would usually output just the canonical name.
+- `awsdns` seems to not allow this. 
+
+# Non-Exceptions
+Other DNS providers that allow this are :
 
 - `*.ns.cloudflare.com` 
 - `*.*.dynect.com/net` 
 - `*.ultradns.net/org/biz/com`
 and a lot more..
 
-**P.S** : This is a product of pure observation. I'm still poking at things to understand them properly. Please do share what you think of this approach. Thanks!
+# Test Case
+
+Against Paypal the tool could gather `698` authoritative nameservers turned resolvers.
+
+
+**P.S** : Please do share what you think of this approach. Thanks!
