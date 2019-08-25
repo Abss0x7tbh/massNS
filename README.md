@@ -117,6 +117,9 @@ Other DNS providers that allow this are :
 - `dnsimple`
 and a lot more to be found.
 
+As of now the above DNS providers are found to be allowing this. Make sure your target employs atleast one of these. To find that out , 
+`host -t ns target.com | grep 'ns\.cloudflare\|dynect\dnsimple\|ultradns'`
+
 
 # Test Case
 
