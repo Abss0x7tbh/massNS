@@ -2,6 +2,12 @@
 # massNS
 A tool that turns the authoritative nameservers of DNS providers to resolvers and resolves the target domain list. As of now the tool only resolves the A record for the list of domains.
 
+# Why Authoritative Nameservers?
+
+- They are always reliable and always up!
+- Sometimes the public dns resolvers would sprout up junk records. Authoritative nameservers would never do that.
+- Every DNS server is rate-limited. They have to be. Hence we need numbers at our side. This tool tries to do just that by poking at the DNS providers infrastructure and asking for a whole lot of active authoritative DNS servers to resolve one of their clients( our target ).
+
 
 # Basic Idea
 
