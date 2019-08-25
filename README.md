@@ -8,7 +8,7 @@ A tool that turns the authoritative nameservers of DNS providers to resolvers an
 - Sometimes the public dns resolvers would sprout up junk records. Authoritative nameservers would never do that.
 - Every DNS server is rate-limited. They have to be. Hence we need numbers at our side. This tool tries to do just that by poking at the DNS providers infrastructure and asking for a whole lot of active authoritative DNS servers to resolve one of their clients( our target ).
 
-**Yes this is more of a Proof Of Concept . I have already contacted the DNS providers that allow this to look into it**
+**This is more of a Proof Of Concept . I have already contacted the DNS providers that allow this to look into it**
 
 # Advisory 
 
