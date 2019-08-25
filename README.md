@@ -117,7 +117,6 @@ Other DNS providers that allow this are :
 - `dnsimple`
 and a lot more to be found.
 
-Make sure the target you are testing this against has the above nameservers in place.
 
 # Test Case
 
