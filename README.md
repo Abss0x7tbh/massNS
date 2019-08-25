@@ -105,7 +105,7 @@ chmod +x massns.sh
 # Exceptions
 
 - if the domain has a canonical name could cause duplicate results in case of multiple domains using the same canonical name.
-- `awsdns` seems to not allow this. 
+- `awsdns` seems to not allow this.[ working on it ] 
 - Custom nameserver like the one's employed by twitter (twtrdns.net) ,facebook etc. They might be hosted on services like amazon which would straight up `REFUSE`
 
 # Non-Exceptions
