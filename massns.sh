@@ -29,6 +29,9 @@ do
 	ipcalc $line | awk '{print $2}' | grep / >> ~/massNS/$1/$1_ns_cidr.txt
 done<~/massNS/$1/$1_ns_ip.txt
 
+# filter awsdns ipranges
+
+sed -i '/^205/d' ~/massNS/$1/$1_ns_cidr.txt
 
 }
 
@@ -92,7 +95,9 @@ echo "Successfully resolved the following domains "
 echo "-------------------------------------"
 cat ~/massNS/$1/$1_op.txt | grep -E "^(Name|Address)" > ~/massNS/$1/$1_tmp.txt
 grep -v -f ~/massNS/$1/$1_resolvers_used.txt ~/massNS/$1/$1_tmp.txt > ~/massNS/$1/$1_op_success.txt
-cat ~/massNS/$1/$1_op_success.txt
+column -x ~/massNS/$1/$1_op_success.txt
+#make a file for canonical name entires
+cat ~/massNS/$1/$1_op.txt | grep canonical > ~/massNS/$1/$1_op_cname.txt
 #dig could also be used only for ips
 #only ips
 echo "Resolved list of IP addresses can be found at ~/massNS/$1/$1_op_success_ip.txt. Opening now "
