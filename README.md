@@ -104,9 +104,9 @@ chmod +x massns.sh
 
 # Exceptions
 
-- if the domain has a canonical name the tool would usually output just the canonical name.
+- if the domain has a canonical name could cause duplicate results in case of multiple domains using the same canonical name.
 - `awsdns` seems to not allow this. 
-- Truly have no idea if the authoritative nameservers would ever complain?
+- Custom nameserver like the one's employed by twitter (twtrdns.net) ,facebook etc. They might be hosted on services like amazon.
 
 # Non-Exceptions
 Other DNS providers that allow this are :
@@ -114,11 +114,14 @@ Other DNS providers that allow this are :
 - `*.ns.cloudflare.com` 
 - `*.*.dynect.com/net` 
 - `*.ultradns.net/org/biz/com`
-and a lot more..
+- `dnsimple`
+and a lot more to be found.
+
+Make sure the target you are testing this against has the above nameservers in place.
 
 # Test Case
 
-Against Paypal the tool could gather `698` authoritative nameservers turned resolvers, a combination of dns servers from both `dynect` & `ultradns`
+Against Paypal the tool could gather `698` authoritative nameservers turned resolvers, a combination of dns servers from both `dynect` & `ultradns` a spaypal employs them.
 
 
 **P.S** : This is purely experimental. Please do share what you think of this approach. Thanks!
