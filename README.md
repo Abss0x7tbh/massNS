@@ -86,8 +86,9 @@ As seen above how the *authoritative nameserver's aren't tied down to their spec
 ```
 sudo apt-get install ipcalc
 ```
-- [Interlace](https://github.com/codingo/Interlace) at the root . Interlace here is used to multi-thread `nslookup`.
-- Masscan
+- [massdns](https://github.com/blechschmidt/massdns)
+- [jq](https://stedolan.github.io/jq/download/)
+- masscan
 
 # Tool Usage
 
@@ -101,9 +102,17 @@ chmod +x massns.sh
 
 # Output
 
-![domain's & ip's ](https://github.com/Abss0x7tbh/massNS/blob/master/ss_1.png)
+- Generic output
 
-![only ip's](https://github.com/Abss0x7tbh/massNS/blob/master/ss_2.png)
+![domain's & ip's ](https://github.com/Abss0x7tbh/massNS/blob/master/op1.png)
+
+- Only IP addresses
+
+![only ip's](https://github.com/Abss0x7tbh/massNS/blob/master/op2.png)
+
+- Stats at the end!
+
+![stats](https://github.com/Abss0x7tbh/massNS/blob/master/op.png)
 
 # Exceptions
 
@@ -127,6 +136,10 @@ As of now the above DNS providers are found to be allowing this. Make sure your 
 # Test Case
 
 Against Paypal the tool could gather `698` authoritative nameservers turned resolvers, a combination of dns servers from both `dynect` & `ultradns` a spaypal employs them.
+
+# Thanks
+
+Kudos to [Patrik Hudak](https://twitter.com/0xpatrik) for some good suggestions and help.
 
 
 **P.S** : This is purely experimental. Please do share what you think of this approach. Thanks!
