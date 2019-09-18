@@ -84,7 +84,7 @@ As seen above how the *authoritative nameserver's aren't tied down to their spec
 - ipcalc
 
 ```
-sudo apt-get install ipcalc
+$ sudo apt-get install ipcalc
 ```
 - [massdns](https://github.com/blechschmidt/massdns)
 - [jq](https://stedolan.github.io/jq/download/)
