@@ -1,4 +1,7 @@
 
+# This repo is more of me sharing an idea with everyone. Head over to [bass](https://github.com/Abss0x7tbh/bass) for the finished tool :)
+
+
 # massNS
 A tool that turns the authoritative nameservers of DNS providers to resolvers and resolves the target domain list. As of now the tool only resolves the A record for the list of domains.
 
