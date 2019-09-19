@@ -18,14 +18,14 @@ The idea behind this tool is a product of observing how an authoritative nameser
 
 **Proof**
 
-1. Fetch `bugcrowd.com` nameservers 
+1. Fetch `bugcrowd.com` nameservers
 
 ```
 $ host -t ns bugcrowd.com
 bugcrowd.com name server edna.ns.cloudflare.com.
 bugcrowd.com name server lee.ns.cloudflare.com.
 ```
-2. Fetch `upserve.com` nameservers 
+2. Fetch `upserve.com` nameservers
 
 ```
 $ host -t ns upserve.com
@@ -79,12 +79,12 @@ Address: 35.221.46.9
 
 As seen above how the *authoritative nameserver's aren't tied down to their specific domain names*, we could leverage the way these DNS providers are configured. We could probe into the IP range of the respective DNS Providers > grab all the active DNS servers in their range > use them as resolvers against our target list. All these servers would answer authoritatively due to their configuration as observed.
 
-# Requirements 
+# Requirements
 
 - ipcalc
 
 ```
-sudo apt-get install ipcalc
+$ sudo apt-get install ipcalc
 ```
 - [massdns](https://github.com/blechschmidt/massdns)
 - [jq](https://stedolan.github.io/jq/download/)
@@ -92,27 +92,25 @@ sudo apt-get install ipcalc
 
 # Tool Usage
 
-- Run 
-
 ```
-cd massNS
-chmod +x massns.sh
-./massns.sh target.com /path/to/taregt/domains
+$ cd massNS
+$ chmod +x massns.sh
+$ ./massns.sh target.com /path/to/target/domains
 ```
 
 # Output
 
 - Generic output
 
-![domain's & ip's ](https://github.com/Abss0x7tbh/massNS/blob/master/op1.png)
+![domain's & ip's ](https://user-images.githubusercontent.com/32202226/65171312-78268d80-da42-11e9-818c-96e1d96a749a.png)
 
 - Only IP addresses
 
-![only ip's](https://github.com/Abss0x7tbh/massNS/blob/master/op2.png)
+![only ip's](https://user-images.githubusercontent.com/32202226/65171313-78268d80-da42-11e9-8059-2bc3367ddd6b.png)
 
 - Stats at the end!
 
-![stats](https://github.com/Abss0x7tbh/massNS/blob/master/op.png)
+![stats](https://user-images.githubusercontent.com/32202226/65171311-778df700-da42-11e9-9310-7f323a66a311.png)
 
 # Exceptions
 
@@ -123,13 +121,13 @@ chmod +x massns.sh
 
 DNS providers that allow this are :
 
-- `*.ns.cloudflare.com` 
-- `*.*.dynect.com/net` 
+- `*.ns.cloudflare.com`
+- `*.*.dynect.com/net`
 - `*.ultradns.net/org/biz/com`
 - `dnsimple`
 and a lot more to be found.
 
-As of now the above DNS providers are found to be allowing this. Make sure your target employs atleast one of these. To find that out , 
+As of now the above DNS providers are found to be allowing this. Make sure your target employs atleast one of these. To find that out ,
 `host -t ns target.com | grep 'ns\.cloudflare\|dynect\dnsimple\|ultradns'`
 
 
